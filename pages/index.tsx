@@ -65,11 +65,11 @@ const Home: NextPage = () => {
           <div className="box">
             <div className="box-div">
               <div className="box-inner">
-                <img src={game} alt="" />
+                <img src={game.src} alt="" />
                 <h3>Gaming & Sports</h3>
               </div>
               <div className="box-inner">
-                <img src={luxury} alt="" />
+                <img src={luxury.src} alt="" />
                 <h3>
                   Luxury Brands &<br /> digital Collectibles
                 </h3>
@@ -77,12 +77,12 @@ const Home: NextPage = () => {
             </div>
             <div className="box-div">
               <div className="box-inner">
-                <img src={ecom} alt="" />
+                <img src={ecom.src} alt="" />
                 <h3>E-commerce</h3>
               </div>
 
               <div className="box-inner">
-                <img src={int} alt="" />
+                <img src={int.src} alt="" />
                 <h3>
                   Entertainment &<br /> Animation
                 </h3>
@@ -90,11 +90,11 @@ const Home: NextPage = () => {
             </div>
             <div className="box-div">
               <div className="box-inner">
-                <img src={art} alt="" />
+                <img src={art.src} alt="" />
                 <h3>Art & More</h3>
               </div>
               <div className="box-inner">
-                <img src={loyal} alt="" />
+                <img src={loyal.src} alt="" />
                 <h3>
                   Loyalty, Rewards &<br /> Incentives
                 </h3>
@@ -103,22 +103,22 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="page4">
-          <img src={banner1} alt="" />
+          <img src={banner1.src} alt="" />
           <div className="subscribe-input">
             <input type="email" placeholder="Enter your email" />
             <div className="circle-arrow">
-              <img src={arrow} alt="" />
+              <img src={arrow.src} alt="" />
             </div>
           </div>
           <h2>
             Are you Going to Change the World ?<br />
             Own your NFT
           </h2>
-          <img src={banner2} alt="" />
+          <img src={banner2.src} alt="" />
         </div>
         <div className="page5">
           <div className="page5-left_section">
-            <img src={nft} alt="" />
+            <img src={nft.src} alt="" />
           </div>
           <div className="page5-right_section">
             <h2>
@@ -138,7 +138,7 @@ const Home: NextPage = () => {
               ledger of information.
             </p>
             <button>
-              Learn More <img src={arrow} alt="" />
+              Learn More <img src={arrow.src} alt="" />
             </button>
           </div>
         </div>
@@ -172,7 +172,7 @@ const Home: NextPage = () => {
                 placeholder="Tell us more about your NFTs"
               ></textarea>
               <button>
-                Send Message <img src={arrow} alt="" />
+                Send Message <img src={arrow.src} alt="" />
               </button>
             </form>
           </div>

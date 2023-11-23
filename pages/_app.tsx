@@ -4,7 +4,7 @@ import '../index.css';
 import { Navbar } from "../components/Navbar";
 import "../css/Home.css";
 import '../css/Navbar.css';
-
+import "../css/NftListing.css";
 
 const activeChain = "mumbai";
 

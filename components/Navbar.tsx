@@ -4,12 +4,10 @@ import NextLink from 'next/link';
 import logo from '../assets/photos/logo.png'
 
 export function Navbar() {
-
     return (
-        
             <div>
                 <nav>
-    <img src={logo} alt="Logo" />
+    <img src={logo.src} alt="Logo" />
     <ul>
         <NextLink href={'/'} style={{ textDecoration: 'none' }}><li>Home</li></NextLink>
         <NextLink href={'/buy'} style={{ textDecoration: 'none' }}><li>Buy</li></NextLink>
