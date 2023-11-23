@@ -1,7 +1,9 @@
 import type { AppProps } from "next/app";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
-import "../styles/globals.css";
+import '../index.css';
 import { Navbar } from "../components/Navbar";
+import "../css/Home.css";
+import '../css/Navbar.css';
 
 
 const activeChain = "mumbai";
@@ -9,8 +11,9 @@ const activeChain = "mumbai";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider activeChain={activeChain}>
-      <Component {...pageProps} />
       <Navbar />
+      <Component {...pageProps} />
+      
     </ThirdwebProvider>
   );
 }

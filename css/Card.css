@@ -1,0 +1,31 @@
+.Card{
+    height: 320px;
+    width: 250px;
+    background-color: black;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Card img{
+    height: 70%;
+    object-fit: cover;
+    width: 100%;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+h3{
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.Card button{
+    height: 40px;
+    width: 100%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: none;
+    background-color: #00D0DD;
+}

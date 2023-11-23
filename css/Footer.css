@@ -1,0 +1,41 @@
+@font-face {
+  font-family: roboto;
+  src: url(../assets/Fonts/Roboto-Regular.ttf);
+}
+footer{
+    padding: 50px 10vw;
+    color: #000;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .box1 #start p{
+    font-weight: 900;
+  }
+
+  .logo-div p{
+    padding-left: 20px;
+    font-family: roboto;
+  }
+  
+  .box1,.box2,.box3 {
+    font-family: roboto;
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .box1>p,.box2>p,.box3>p{
+    font-family: roboto;
+  }
+  
+.icons{
+  display: flex;
+  gap: 10px;
+}
+
+.icons img{
+  height: 25px;
+}
+
