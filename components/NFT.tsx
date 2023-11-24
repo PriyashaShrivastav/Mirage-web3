@@ -27,39 +27,27 @@ export default function NFTComponent({ nft }: Props) {
         });
 
     return (
-        <div>
-            <div>
-                <ThirdwebNftMedia metadata={nft.metadata} height={"100%"} width={"100%"} />
-            </div>
-            <div>Token ID #{nft.metadata.id}</div>
-            <div>{nft.metadata.name}</div>
-
-            <div>
+        <div className="Card">           
+                <ThirdwebNftMedia metadata={nft.metadata} height={'70%'} width={"100%"} style={{"object-fit":"cover"}} />
+            <div className=".card-text">
+                <h3>Token ID #{nft.metadata.id}</h3>
+                <h3>{nft.metadata.name}</h3>
                 {loadingMarketplace || loadingDirectListing || loadingAuction ? (
                     <section></section>
-                ) : directListing && directListing[0] ? (
-                    <div>
-                        <div>
-                            <h2>Price</h2>
-                            <h2>{`${directListing[0]?.currencyValuePerToken.displayValue} ${directListing[0]?.currencyValuePerToken.symbol}`}</h2>
-                        </div>
-                    </div>
+                ) : directListing && directListing[0] ? (                
+                            <h3>{`${directListing[0]?.currencyValuePerToken.displayValue} ${directListing[0]?.currencyValuePerToken.symbol}`}</h3>                    
                 ) : auctionListing && auctionListing[0] ? (
                     <div>
-                        <div>
-                            <h1>Minimum Bid</h1>
-                            <h1>{`${auctionListing[0]?.minimumBidCurrencyValue.displayValue} ${auctionListing[0]?.minimumBidCurrencyValue.symbol}`}</h1>
-                        </div>
+                            <p>Minimum Bid</p>
+                            <p>{`${auctionListing[0]?.minimumBidCurrencyValue.displayValue} ${auctionListing[0]?.minimumBidCurrencyValue.symbol}`}</p>
                     </div>
                 ) : (
                     <div>
-                        <div>
-                            <h2>Price</h2>
-                            <h2>Not Listed</h2>
-                        </div>
+                         <h3>Not Listed</h3>                   
                     </div>
                 )}
             </div>
+                
         </div>
     )
 };

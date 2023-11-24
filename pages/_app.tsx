@@ -5,6 +5,7 @@ import { Navbar } from "../components/Navbar";
 import "../css/Home.css";
 import '../css/Navbar.css';
 import "../css/NftListing.css";
+import '../css/Card.css'
 
 const activeChain = "mumbai";
 
