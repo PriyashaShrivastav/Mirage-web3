@@ -130,6 +130,10 @@ export default function SaleInfo({ nft }: Props) {
                             <h3>Listing ends on:</h3>
                             <input
                                 placeholder="Select Date and Time"
+<<<<<<< Updated upstream
+=======
+                                
+>>>>>>> Stashed changes
                                 type="datetime-local"
                                 {...registerDirect("endDate")}
                             />

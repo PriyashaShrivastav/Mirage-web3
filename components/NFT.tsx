@@ -28,7 +28,11 @@ export default function NFTComponent({ nft }: Props) {
 
     return (
         <div className="Card">           
+<<<<<<< Updated upstream
                 <ThirdwebNftMedia metadata={nft.metadata}  />
+=======
+                <ThirdwebNftMedia metadata={nft.metadata} height={'70%'} width={"100%"} />
+>>>>>>> Stashed changes
             <div className=".card-text">
                 <p>Token ID #{nft.metadata.id}</p>
                 <h3>{nft.metadata.name}</h3>
