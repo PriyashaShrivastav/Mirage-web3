@@ -28,23 +28,12 @@ export default function NFTComponent({ nft }: Props) {
 
     return (
         <div className="Card">           
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-                <ThirdwebNftMedia metadata={nft.metadata}  />
-=======
-                <ThirdwebNftMedia metadata={nft.metadata} height={'70%'} width={"100%"} />
->>>>>>> Stashed changes
-            <div className=".card-text">
-                <p>Token ID #{nft.metadata.id}</p>
-                <h3>{nft.metadata.name}</h3>
-=======
                 <ThirdwebNftMedia metadata={nft.metadata} height={'70%'} width={"100%"} style={{"object-fit":"cover"}} />
             <div className="card-text">
                 <div className="name-token">
                 <h3 >{nft.metadata.name}</h3> 
                 <p >ID #{nft.metadata.id}</p>
                 </div>                          
->>>>>>> Stashed changes
                 {loadingMarketplace || loadingDirectListing || loadingAuction ? (
                     <section></section>
                 ) : directListing && directListing[0] ? (                
