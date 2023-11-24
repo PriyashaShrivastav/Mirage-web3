@@ -35,14 +35,6 @@ export default function Buy() {
             </div>
         </div>
         <div className="content-middle">
-          <div className="topbar">
-            <input type="text" placeholder="search"/>
-            <div className="wallet">1234 ETH</div>
-            <div className="notification">
-              <img src={noti.src} alt="" />
-              <img src={msg.src} alt="" />
-              </div>           
-          </div>
           <div className="create-nft">
             <div className="create-nft-left">
             <h1>Create your <br/> own NFT</h1>
@@ -52,19 +44,19 @@ export default function Buy() {
             <img src={specsguy.src} alt="" />
           </div>
           <div className="cards-section">
-            <h1>HOT DROPS</h1>
-            <div className="card" style={{"display":"flex","gap":"30px","flex-wrap":"wrap"}}>
+            <h1 >HOT DROPS</h1>
+            {/* <div className="card" style={{"display":"flex","gap":"30px","flex-wrap":"wrap"}}> */}
             <NFTGrid 
                 isLoading={isLoading} 
                 data={data} 
                 emptyText={"No NFTs found"}
             />
-            </div>           
+            {/* </div>            */}
           </div>
         </div>
-        <div className="content-right">
+        {/* <div className="content-right">
           <div className="user"><img src={user.src} alt="" style={{"width": "50px","border-radius": "20px"}}/> Hello, Adam</div>
-        </div>
+        </div> */}
       </div>
       
     </div>

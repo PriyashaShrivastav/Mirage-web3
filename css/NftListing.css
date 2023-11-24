@@ -34,7 +34,7 @@
 .content-middle{
     width: 1200px;
     height: 100vh;
-
+    margin-right: 20px;
     border-radius: 20px;
 }
 
@@ -122,12 +122,12 @@
     display: flex;
     background-image: url('../assets/photos/bgNFT.png');
     align-items: center;
-    gap: 70px;
+    justify-content: space-between;
 }
 
 .create-nft img{
     height: 300px;
-    padding-left: 30px;
+    margin-right: 30px;
 }
 
 .create-nft-left{
@@ -171,6 +171,11 @@
 
 .cards-section{
     margin-bottom: 10px;
+}
+
+.cards-section h1{
+    color: #000000;
+    padding: 20px 0 20px 0;
 }
 
 

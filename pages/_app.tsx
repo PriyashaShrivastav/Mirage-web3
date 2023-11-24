@@ -6,6 +6,7 @@ import "../css/Home.css";
 import '../css/Navbar.css';
 import "../css/NftListing.css";
 import '../css/Card.css'
+import '../App.css'
 
 const activeChain = "mumbai";
 

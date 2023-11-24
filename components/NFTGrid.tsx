@@ -18,7 +18,7 @@ export default function NFTGrid({
     emptyText = "No NFTs found",
 }: Props) {
     return (
-        <div className="card">
+        <div className="card-store">
             {isLoading ? (
                 [...Array(20)].map((_, index) => (
                     <div key={index} />

@@ -1,11 +1,11 @@
 .Card{
     height: 320px;
     width: 250px;
-    background-color: black;
+    background-color: #232b2b;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+   margin: 20px;
 }
 
 .Card img{
@@ -17,8 +17,14 @@
 }
 
 h3{
-    margin-left: 20px;
-    margin-bottom: 5px;
+    /* margin-left: 20px;
+    margin-bottom: 5px; */
+}
+
+.name-token{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .Card button{
@@ -28,4 +34,13 @@ h3{
     border-bottom-right-radius: 25px;
     border: none;
     background-color: #00D0DD;
+}
+
+.card-text{
+    padding: 20px;
+}
+
+.card-store{
+    display: flex;
+    flex-wrap: wrap;
 }

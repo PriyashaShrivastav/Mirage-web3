@@ -87,10 +87,9 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
   }
 
   return (
-    <div>
+    <div className="nft-page">
       <div>
-        <div>
-          <div>
+        <div>          
             <div isLoaded ={!loadingMarketplace && !loadingDirectListing}>
               <ThirdwebNftMedia
                 metadata={nft.metadata}
@@ -98,7 +97,6 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                 height="100%"
               />
             </div>
-          </div>
           <div>
             <h2>Description:</h2>
             <h2>{nft.metadata.description}</h2>
