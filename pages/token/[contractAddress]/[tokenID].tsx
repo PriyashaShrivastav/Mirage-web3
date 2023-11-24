@@ -24,7 +24,7 @@ type Props = {
 export default function TokenPage({ nft, contractMetadata }: Props) {
   const { contract: marketplace, isLoading: loadingMarketplace } = useContract(
     MARKETPLACE_ADDRESS,
-    "0x8174b276DD113Be090132cA156EFE47e3164A768"
+    "marketplace-v3"
   );
 
   const { contract: nftCollection } = useContract(NFT_COLLECTION_ADDRESS);
@@ -34,8 +34,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
       tokenContract: NFT_COLLECTION_ADDRESS,
       tokenId: nft.metadata.id,
     });
-
-  //Add these for auction section
+  
   const [bidValue, setBidValue] = useState<string>();
 
   const { data: auctionListing, isLoading: loadingAuction } =
@@ -47,7 +46,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
   async function buyListing() {
     let txResult;
 
-    //Add for auction section
+
     if (auctionListing?.[0]) {
       txResult = await marketplace?.englishAuctions.buyoutAuction(
         auctionListing[0].id
@@ -92,7 +91,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
       <div>
         <div>
           <div>
-            <div isLoaded={!loadingMarketplace && !loadingDirectListing}>
+            <div isLoaded ={!loadingMarketplace && !loadingDirectListing}>
               <ThirdwebNftMedia
                 metadata={nft.metadata}
                 width="100%"
@@ -145,7 +144,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
           <div>
             <h2>Price:</h2>
-            <div isLoaded={!loadingMarketplace && !loadingDirectListing}>
+            <div isLoaded ={!loadingMarketplace && !loadingDirectListing}>
               {directListing && directListing[0] ? (
                 <h2>
                   {directListing[0]?.currencyValuePerToken.displayValue}
@@ -160,7 +159,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                 <h2>Not for sale</h2>
               )}
             </div>
-            <div isLoaded={!loadingAuction}>
+            <div isLoaded ={!loadingAuction}>
               {auctionListing && auctionListing[0] && (
                 <div>
                   <h2>Bids starting from</h2>
@@ -173,8 +172,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
               )}
             </div>
           </div>
-          <div
-            isLoaded={
+          <div isLoaded ={
               !loadingMarketplace || !loadingDirectListing || !loadingAuction
             }
           >
@@ -257,6 +255,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: "blocking", // can also be true or 'blocking'
+    fallback: "blocking",
   };
 };
