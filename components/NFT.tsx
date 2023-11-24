@@ -30,7 +30,7 @@ export default function NFTComponent({ nft }: Props) {
         <div className="Card">           
                 <ThirdwebNftMedia metadata={nft.metadata} height={'70%'} width={"100%"} style={{"object-fit":"cover"}} />
             <div className=".card-text">
-                <h3>Token ID #{nft.metadata.id}</h3>
+                <p>Token ID #{nft.metadata.id}</p>
                 <h3>{nft.metadata.name}</h3>
                 {loadingMarketplace || loadingDirectListing || loadingAuction ? (
                     <section></section>
