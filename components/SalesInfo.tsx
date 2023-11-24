@@ -124,14 +124,12 @@ export default function SaleInfo({ nft }: Props) {
                             <h2>Listing starts on:</h2>
                             <input
                                 placeholder="Select Date and Time"
-                                size="md"
                                 type="datetime-local"
                                 {...registerDirect("startDate")}
                             />
                             <h3>Listing ends on:</h3>
                             <input
                                 placeholder="Select Date and Time"
-                                size="md"
                                 type="datetime-local"
                                 {...registerDirect("endDate")}
                             />
@@ -140,7 +138,6 @@ export default function SaleInfo({ nft }: Props) {
                             <h3>Price:</h3>
                             <input
                                 placeholder="0"
-                                size="md"
                                 type="number"
                                 {...registerDirect("price")}
                             />
@@ -162,14 +159,12 @@ export default function SaleInfo({ nft }: Props) {
                             <h2>Listing starts on:</h2>
                             <input
                                 placeholder="Select Date and Time"
-                                size="md"
                                 type="datetime-local"
                                 {...registerAuction("startDate")}
                             />
                             <h2>Listing ends on:</h2>
                             <input
                                 placeholder="Select Date and Time"
-                                size="md"
                                 type="datetime-local"
                                 {...registerAuction("endDate")}
                             />
@@ -178,7 +173,6 @@ export default function SaleInfo({ nft }: Props) {
                             <h2>Starting bid from:</h2>
                             <input
                                 placeholder="0"
-                                size="md"
                                 type="number"
                                 {...registerAuction("floorPrice")}
                             />
@@ -187,7 +181,6 @@ export default function SaleInfo({ nft }: Props) {
                             <h2>Buyout price:</h2>
                             <input
                                 placeholder="0"
-                                size="md"
                                 type="number"
                                 {...registerAuction("buyoutPrice")}
                             />

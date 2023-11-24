@@ -144,8 +144,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
           <div>
             <h2>Price:</h2>
-            <div isLoaded ={!loadingMarketplace && !loadingDirectListing}>
-              {directListing && directListing[0] ? (
+            <div isLoaded ={!loadingMarketplace && !loadingDirectListing}>{directListing && directListing[0] ? (
                 <h2>
                   {directListing[0]?.currencyValuePerToken.displayValue}
                   {" " + directListing[0]?.currencyValuePerToken.symbol}
@@ -159,8 +158,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                 <h2>Not for sale</h2>
               )}
             </div>
-            <div isLoaded ={!loadingAuction}>
-              {auctionListing && auctionListing[0] && (
+            <div isLoaded ={!loadingAuction}>{auctionListing && auctionListing[0] && (
                 <div>
                   <h2>Bids starting from</h2>
                   <h3>
@@ -172,10 +170,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
               )}
             </div>
           </div>
-          <div isLoaded ={
-              !loadingMarketplace || !loadingDirectListing || !loadingAuction
-            }
-          >
+          <div isLoaded ={!loadingMarketplace || !loadingDirectListing || !loadingAuction}>
             <div>
               <Web3Button
                 contractAddress={MARKETPLACE_ADDRESS}
