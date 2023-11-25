@@ -7,6 +7,9 @@ import '../css/Navbar.css';
 import "../css/NftListing.css";
 import '../css/Card.css'
 import '../App.css'
+import '../css/AboutUs.css'
+import '../css/Footer.css'
+import Footer from "../components/Footer";
 
 const activeChain = "mumbai";
 
@@ -15,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThirdwebProvider activeChain={activeChain}>
       <Navbar />
       <Component {...pageProps} />
-      
+      <Footer />
     </ThirdwebProvider>
   );
 }

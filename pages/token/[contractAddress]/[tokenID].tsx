@@ -111,22 +111,22 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
               </div>
             </Link>
             <div className="my-7 w-full border border-gray-400 border-solid p-4  rounded-3xl">
-              <h1 className="text-sm text-black flex">Current Price:</h1>
+              <h1 className="text-sm text-black flex mb-3">Current Price:</h1>
               <div isLoaded={!loadingMarketplace && !loadingDirectListing} className="text-3xl text-black ">
                 {directListing && directListing[0] ? (
-                  <h2>
+                  <h2 className="flex mb-3">
                     <img src="https://logowik.com/content/uploads/images/polygon-matic-icon3725.logowik.com.webp" alt="" className="w-14"/>
                     {directListing[0]?.currencyValuePerToken.displayValue}
                     {" " + directListing[0]?.currencyValuePerToken.symbol}
                   </h2>
                 ) : auctionListing && auctionListing[0] ? (
-                  <h2>
+                  <h2 className="flex mb-3">
                     <img src="https://logowik.com/content/uploads/images/polygon-matic-icon3725.logowik.com.webp" alt="" className="w-14"/>
                     {auctionListing[0]?.buyoutCurrencyValue.displayValue}
                     {" " + auctionListing[0]?.buyoutCurrencyValue.symbol}
                   </h2>
                 ) : (
-                  <h2 className="flex">
+                  <h2 className="flex mb-3">
                     <img src="https://logowik.com/content/uploads/images/polygon-matic-icon3725.logowik.com.webp" alt="" className="w-14"/>
                     Not for sale</h2>
                 )}
@@ -136,8 +136,9 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
               !loadingMarketplace || !loadingDirectListing || !loadingAuction
             }
           >
-            <div>
+            <div className="mb-3">
               <Web3Button
+              className="mb-3"
                 contractAddress={MARKETPLACE_ADDRESS}
                 action={async () => buyListing()}
                 isDisabled={
@@ -147,10 +148,10 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
               >
                 Buy at asking price
               </Web3Button>
-              <h4 className="text-black px-20">or</h4>
+              <h4 className="text-black px-20 my-3">OR</h4>
               <div className="flex gap-10 ">
                 <input
-                className="rounded-xl text-black border border-black border-solid"
+                className="rounded-xl text-black border border-black border-solid pl-3"
                   defaultValue={
                     auctionListing?.[0]?.minimumBidCurrencyValue
                       ?.displayValue || 0
@@ -179,120 +180,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
               </div>
           </div>
         </div>
-      </div>
-      <div>
-        <div>
-          <div>
-            <h2 className="text-black"> Description:</h2>
-            <h2 className="text-black">{nft.metadata.description}</h2>
-          </div>
-          <div>
-            <h2>Traits:</h2>
-            <div>
-              {Object.entries(nft?.metadata?.attributes || {}).map(
-                ([key, value]) => (
-                  <div key={key}>
-                    <h3 className="text-black">{value.trait_type}</h3>
-                    <h3 className="text-black">{value.value}</h3>
-                  </div>
-                )
-              )}
-            </div>
-          </div>
-        </div>
-
-        <div>
-          {contractMetadata && (
-            <div>
-              <div>
-                <MediaRenderer
-                  src={contractMetadata.image}
-                  height="32px"
-                  width="32px"
-                />
-              </div>
-              <h3 className="text-black">{contractMetadata.name}</h3>
-            </div>
-          )}
-          <div>
-            <div className="text-black">{nft.metadata.name}</div>
-            <Link href={`/profile/${nft.owner}`}>
-              <div>
-                <h3 className="text-black">
-                  {nft.owner.slice(0, 6)}...{nft.owner.slice(-4)}
-                </h3>
-              </div>
-            </Link>
-          </div>
-
-          <div>
-            <h2>Price:</h2>
-            <div isLoaded={!loadingMarketplace && !loadingDirectListing}>
-              {directListing && directListing[0] ? (
-                <h2>
-                  {directListing[0]?.currencyValuePerToken.displayValue}
-                  {" " + directListing[0]?.currencyValuePerToken.symbol}
-                </h2>
-              ) : auctionListing && auctionListing[0] ? (
-                <h2>
-                  {auctionListing[0]?.buyoutCurrencyValue.displayValue}
-                  {" " + auctionListing[0]?.buyoutCurrencyValue.symbol}
-                </h2>
-              ) : (
-                <h2>Not for sale</h2>
-              )}
-            </div>
-            <div isLoaded={!loadingAuction}>
-              {auctionListing && auctionListing[0] && (
-                <div>
-                  <h2 className="text-black">Bids starting from</h2>
-                  <h3 className="text-black">
-                    {auctionListing[0]?.minimumBidCurrencyValue.displayValue}
-                    {" " + auctionListing[0]?.minimumBidCurrencyValue.symbol}
-                  </h3>
-                  <h3></h3>
-                </div>
-              )}
-            </div>
-          </div>
-          <div
-            isLoaded={
-              !loadingMarketplace || !loadingDirectListing || !loadingAuction
-            }
-          >
-            <div>
-              <Web3Button
-                contractAddress={MARKETPLACE_ADDRESS}
-                action={async () => buyListing()}
-                isDisabled={
-                  (!auctionListing || !auctionListing[0]) &&
-                  (!directListing || !directListing[0])
-                }
-              >
-                Buy at asking price
-              </Web3Button>
-              <h4>or</h4>
-              <div>
-                <input
-                  defaultValue={
-                    auctionListing?.[0]?.minimumBidCurrencyValue
-                      ?.displayValue || 0
-                  }
-                  type={"number"}
-                  onChange={(e) => setBidValue(e.target.value)}
-                />
-                <Web3Button
-                  contractAddress={MARKETPLACE_ADDRESS}
-                  action={async () => await createBidOffer()}
-                  isDisabled={!auctionListing || !auctionListing[0]}
-                >
-                  Place Bid
-                </Web3Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </div>     
     </>
   );
 }

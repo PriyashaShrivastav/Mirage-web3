@@ -5,10 +5,10 @@ import specsguy from '../assets/photos/specsguy.png'
 import noti from '../assets/photos/noti.png'
 import msg from '../assets/photos/message.png'
 import user from '../assets/photos/user.jpeg'
-import Card from "../components/Card";
 import NFTGrid from "../components/NFTGrid";
 import { NFT_COLLECTION_ADDRESS } from "../const/addresses";
 import { useContract, useNFTs } from "@thirdweb-dev/react";
+
 
 export default function Buy() {
     const { contract } = useContract(NFT_COLLECTION_ADDRESS);
@@ -37,7 +37,7 @@ export default function Buy() {
         <div className="content-middle">
           <div className="create-nft">
             <div className="create-nft-left">
-            <h1>Create your <br/> own NFT</h1>
+            <h1>Sell your <br/> own NFT</h1>
             <button className="button1">Start Sale</button>
             <button className="button2">Learn More</button>
             </div>

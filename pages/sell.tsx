@@ -14,8 +14,15 @@ export default function Sell() {
 
     return (
         <div>
-            <h1 >Sell NFTs</h1>
-            <h2>Select which NFT to sell below.</h2>
+            <div className="h-64 bg-gradient-to-r from-cyan-500 to-blue-500  flex items-center justify-center mx-5 rounded-3xl flex-col gap-6 my-4">
+        <h1 className="text-5xl font-extrabold text-white py-6 font-sans">
+          Sell your NFTs
+        </h1>
+ 
+        
+      </div>
+            <h2 className="text-black text-center text-2xl">Select which NFT to sell below</h2>
+            <h2 className="text-black px-10 text-lg">Owned NFTs</h2>
             {!selectedNFT ? (
                 <NFTGrid
                     data={data}
@@ -29,20 +36,19 @@ export default function Sell() {
                 <div>
                     <div>
                         <div>
-                            <ThirdwebNftMedia
+                            {/* <ThirdwebNftMedia
                                 metadata={selectedNFT.metadata}
                                 width="100%"
                                 height="100%"
-                            />
+                            /> */}
                             <div>
                                 <div>
-                                    <button
+                                    <button className="absolute top-50 right-20 bg-black px-4 py-1 rounded-full text-3xl "
                                         onClick={() => {
                                             setSelectedNFT(undefined);
                                         }}
                                     >X</button>
                                 </div>
-                                <h1>{selectedNFT.metadata.name}</h1>
                                 <SaleInfo
                                     nft={selectedNFT}
                                 />
