@@ -167,8 +167,8 @@ const Home: NextPage = () => {
               <textarea
                 name="description"
                 id=""
-                cols="40"
-                rows="5"
+                cols={40}
+                rows={5}
                 placeholder="Tell us more about your NFTs"
               ></textarea>
               <button>

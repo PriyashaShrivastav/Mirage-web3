@@ -28,7 +28,7 @@ export default function NFTComponent({ nft }: Props) {
 
     return (
         <div className="Card">           
-                <ThirdwebNftMedia metadata={nft.metadata} height={'70%'} width={"100%"} style={{"object-fit":"cover"}} />
+                <ThirdwebNftMedia metadata={nft.metadata} height={'70%'} width={"100%"} style={{"objectFit":"cover"}} />
             <div className="card-text">
                 <div className="name-token">
                 <h3 >{nft.metadata.name}</h3> 
