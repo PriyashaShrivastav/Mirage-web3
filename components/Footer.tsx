@@ -9,7 +9,8 @@ const Footer = () => {
     <footer className='bg-gray-200 '>
     <div className="logo-div">
     <img src={logo.src} alt='Logo' />
-     <p>Lorem ispum is simply dummy text of <br />printing and typesetting industry</p>
+     <p>Where Creativity Meets Ownership<br></br>
+Empowering Digital Expression</p>
     </div>
      <div className='box1'>
         <p id="start">Mirage</p>
