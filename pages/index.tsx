@@ -25,7 +25,9 @@ const Home: NextPage = () => {
             {/* <button>Connect Wallet</button> */}
             
             
-          {/* <video src={apevid} muted autoPlay loop></video> */}
+          <video muted autoPlay loop>
+            <source  src='/playback.mp4' type='video/mp4'/>
+          </video>
         </div>
         <div className="page2">
           <h2>NFT DIGITAL ASSET OF ‘UNIQUENESS’</h2>
@@ -50,11 +52,15 @@ const Home: NextPage = () => {
             </h2>
             <p>No Mess. No Clutter. Only you.</p>
           </div>
-          <button>Join the revolution </button>
+          <button onClick={()=>{
+            alert("Hold onto to your seats \nThe revolution in Coming Soon")
+          }}>Join the revolution </button>
           <h1>I’m interested </h1>
-          <div className="subscribe-input">
+          <div className="subscribe-input" >
             <input type="email" placeholder="Enter your email" />
-            <div className="subscribe-btn">
+            <div className="subscribe-btn" onClick={()=>{
+            alert("Hold onto to your seats \nThe revolution in Coming Soon")
+          }}>
               <p>subscribe</p>
               <div className="circle">.</div>
             </div>
@@ -107,7 +113,9 @@ const Home: NextPage = () => {
           <div className="subscribe-input">
             <input type="email" placeholder="Enter your email" />
             <div className="circle-arrow">
-              <img src={arrow.src} alt="" />
+              <img src={arrow.src} alt="" onClick={()=>{
+            alert("Hold onto to your seats \nThe revolution in Coming Soon")
+          }}/>
             </div>
           </div>
           <h2>
@@ -137,9 +145,11 @@ const Home: NextPage = () => {
               traceable on the Blockchain, which is an immutable decentralized
               ledger of information.
             </p>
-            <button>
+            <NextLink href={'/aboutus'}>
+            <button >
               Learn More <img src={arrow.src} alt="" />
             </button>
+            </NextLink>
           </div>
         </div>
         <div className="page6">
@@ -171,7 +181,9 @@ const Home: NextPage = () => {
                 rows={5}
                 placeholder="Tell us more about your NFTs"
               ></textarea>
-              <button>
+              <button onClick={()=>{
+                alert("We Heard you Loud and clear !! \n See you on the flip side")
+              }}>
                 Send Message <img src={arrow.src} alt="" />
               </button>
             </form>

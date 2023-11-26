@@ -87,17 +87,14 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
   return (
     <>
-      <div className="max-h-full flex justify-center">
+      <div className="max-h-full flex justify-center mb-7">
         <div className="flex w-3/5  h-fit border border-gray-400 border-solid p-10 rounded-3xl">
           <div className="w-1/2 flex gap-28 flex-col items-center justify-center">
-            <div isLoaded={!loadingMarketplace && !loadingDirectListing}>
-              <ThirdwebNftMedia
+           {!loadingMarketplace && !loadingDirectListing ? (<ThirdwebNftMedia
                 metadata={nft.metadata}
                 width="90%"
                 height="90%"
-              />
-              
-            </div>
+              />):(<div>NFTs Are Laoding</div>)}            
           </div>
           <div className="w-3/6">
             <h3 className="text-[#00D0DD]">{contractMetadata.name}</h3>
@@ -112,8 +109,8 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
             </Link>
             <div className="my-7 w-full border border-gray-400 border-solid p-4  rounded-3xl">
               <h1 className="text-sm text-black flex mb-3">Current Price:</h1>
-              <div isLoaded={!loadingMarketplace && !loadingDirectListing} className="text-3xl text-black ">
-                {directListing && directListing[0] ? (
+              <div className="text-3xl text-black ">
+                {!loadingMarketplace && !loadingDirectListing?(directListing && directListing[0] ? (
                   <h2 className="flex mb-3">
                     <img src="https://logowik.com/content/uploads/images/polygon-matic-icon3725.logowik.com.webp" alt="" className="w-14"/>
                     {directListing[0]?.currencyValuePerToken.displayValue}
@@ -129,14 +126,9 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                   <h2 className="flex mb-3">
                     <img src="https://logowik.com/content/uploads/images/polygon-matic-icon3725.logowik.com.webp" alt="" className="w-14"/>
                     Not for sale</h2>
-                )}
+                )):(<div>data Loading</div>)}
               </div>
-              <div
-            isLoaded={
-              !loadingMarketplace || !loadingDirectListing || !loadingAuction
-            }
-          >
-            <div className="mb-3">
+              {!loadingMarketplace || !loadingDirectListing || !loadingAuction ?(<div className="mb-3">
               <Web3Button
               className="mb-3"
                 contractAddress={MARKETPLACE_ADDRESS}
@@ -167,8 +159,9 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                   Place Bid
                 </Web3Button>
               </div>
-            </div>
-          </div>
+            </div>):(<div>Loadind data</div>)}
+            
+          
             </div>
             <div className=" border border-gray-400 border-solid h-36 rounded-3xl ">
                 <h2 className="text-black text-xl px-7 -z-10 py-2">

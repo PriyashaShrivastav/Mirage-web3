@@ -26,7 +26,6 @@ type DirectFormData = {
   endDate: Date;
 };
 
-//Add for Auction
 type AuctionFormData = {
   nftContractAddress: string;
   tokenId: string;
@@ -124,7 +123,7 @@ export default function SaleInfo({ nft }: Props) {
 
   return (
     <div>
-      <div className="flex">
+      <div className="flex mb-7">
         <div>
           <div className="max-h-full flex justify-center">
             <div className="flex w-3/5  h-fit border border-gray-400 border-solid p-10 rounded-3xl gap-10">

@@ -15,7 +15,7 @@ const activeChain = "mumbai";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThirdwebProvider activeChain={activeChain}>
+    <ThirdwebProvider activeChain={activeChain} clientId ="79f9cd1333043a656999e194f7b1ebb2" >
       <Navbar />
       <Component {...pageProps} />
       <Footer />

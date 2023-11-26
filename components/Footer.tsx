@@ -6,7 +6,7 @@ import twitter from '../assets/photos/twitter.png'
 
 const Footer = () => {
   return (
-    <footer className='bg-gray-200 mt-7'>
+    <footer className='bg-gray-200 '>
     <div className="logo-div">
     <img src={logo.src} alt='Logo' />
      <p>Lorem ispum is simply dummy text of <br />printing and typesetting industry</p>
