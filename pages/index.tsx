@@ -1,7 +1,5 @@
 import NextLink from 'next/link'
 import type { NextPage } from "next";
-
-
 import game from "../assets/photos/Home/group1757.png";
 import ecom from "../assets/photos/Home/group1758.png";
 import art from "../assets/photos/Home/group1759.png";

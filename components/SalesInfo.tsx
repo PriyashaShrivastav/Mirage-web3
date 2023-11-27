@@ -148,14 +148,14 @@ export default function SaleInfo({ nft }: Props) {
                       <input
                         className="text-black  mb-2 border-2 rounded-xl p-1"
                         placeholder="Select Date and Time"
-                        type="datetime-local"
+                        type="date"
                         {...registerDirect("startDate")}
                       />
                       <h3 className="text-black ">Listing ends on:</h3>
                       <input
                         className="text-black  mb-2 border-2 rounded-xl p-1"
                         placeholder="Select Date and Time"
-                        type="datetime-local"
+                        type="date"
                         {...registerDirect("endDate")}
                       />
                     </div>
@@ -192,14 +192,14 @@ export default function SaleInfo({ nft }: Props) {
                       <input
                         className="text-black  mb-2 border-2 rounded-xl p-1"
                         placeholder="Select Date and Time"
-                        type="datetime-local"
+                        type="date"
                         {...registerAuction("startDate")}
                       />
                       <h2 className="text-black">Listing ends on:</h2>
                       <input
                         className="text-black  mb-2 border-2 rounded-xl p-1"
                         placeholder="Select Date and Time"
-                        type="datetime-local"
+                        type="date"
                         {...registerAuction("endDate")}
                       />
                     </div>
