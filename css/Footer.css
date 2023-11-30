@@ -3,6 +3,10 @@
   src: url(../assets/Fonts/Roboto-Regular.ttf);
 }
 footer{
+  width: 100%;
+
+
+    z-index: 5;
     padding: 50px 10vw;
     color: #000;
     background-color: #fff;

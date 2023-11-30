@@ -39,9 +39,9 @@ export default function NFTComponent({ nft }: Props) {
                 ) : directListing && directListing[0] ? (                
                             <h3>{`${directListing[0]?.currencyValuePerToken.displayValue} ${directListing[0]?.currencyValuePerToken.symbol}`}</h3>                                                
                 ) : auctionListing && auctionListing[0] ? (
-                    <div>
+                    <div className="flex gap-7 ">
                             <p>Minimum Bid</p>
-                            <p>{`${auctionListing[0]?.minimumBidCurrencyValue.displayValue} ${auctionListing[0]?.minimumBidCurrencyValue.symbol}`}</p>
+                            <p className="text-white">{`${auctionListing[0]?.minimumBidCurrencyValue.displayValue} ${auctionListing[0]?.minimumBidCurrencyValue.symbol}`}</p>
                     </div>
                 ) : (
                     <div>

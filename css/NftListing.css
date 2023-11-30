@@ -1,11 +1,11 @@
 .nft-marketplace{
-    height: 100%;
+
     width: 100%;
 }
 
 .page-layout{
     display: flex;
-    align-items: center;
+   
     justify-content: center;
     margin-bottom: 100px;
 }
@@ -13,12 +13,10 @@
 .content-left{
     font-family: 'poppins', sans-serif;
     width: 329px;
-    height: 100vh;
     background: #DCDADA;
     margin: 15px;
     border-radius: 25px 20px;
-    display: flex;
-    
+    display: flex; 
     gap: 40px;
     flex-direction: column;
     color: #000000;
@@ -33,14 +31,12 @@
 
 .content-middle{
     width: 1200px;
-    height: 100vh;
     margin-right: 20px;
     border-radius: 20px;
 }
 
 .content-right{
     width: 329px;
-    height: 100vh;
     margin: 15px;
     padding-top: 15px;
     align-items: center;
